@@ -1,0 +1,1 @@
+docker compose -f dockercompose.yml up --scale chrome=5

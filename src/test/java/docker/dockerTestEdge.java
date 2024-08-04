@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class dockerTestEdge {
+public class dockerTestEdge extends BaseClass {
 
 
     @Test
@@ -21,7 +21,7 @@ public class dockerTestEdge {
         cap.setBrowserName("chrome");*/
 
         RemoteWebDriver driver =new RemoteWebDriver(url,options);
-        driver.get("https://www.google.com");
+        driver.get("https://www.gmail.com");
         System.out.println(driver.getTitle());
         driver.close();
     }

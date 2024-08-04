@@ -3,12 +3,9 @@
 <suite name="Docker Test Run">
     <test verbose="2" preserve-order="true" parallel="classes" thread-count="5" name="C:/Users/91762/IdeaProjects/SDET_2024">
         <classes>
-            <class name="docker.dockerTestChrome">
-            </class>
-            <class name="docker.dockerTestEdge">
-            </class>
-            <class name="docker.dockerTestFirefox">
-            </class>
+            <class name="docker.dockerTestChrome"></class>
+            <class name="docker.dockerTestFirefox"></class>
+            <class name="docker.dockerTestEdge"></class>
         </classes>
     </test>
 </suite>

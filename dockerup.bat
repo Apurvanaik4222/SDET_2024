@@ -1,0 +1,1 @@
+docker compose -f dockercompose.yml up >> output.txt 2>&1
