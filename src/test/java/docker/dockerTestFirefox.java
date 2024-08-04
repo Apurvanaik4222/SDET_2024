@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class dockerTestFirefox {
+public class dockerTestFirefox extends BaseClass{
 
 
     @Test
@@ -18,7 +18,7 @@ public class dockerTestFirefox {
 
         FirefoxOptions options =new FirefoxOptions();
         RemoteWebDriver driver =new RemoteWebDriver(url,options);
-        driver.get("https://www.google.com");
+        driver.get("https://www.youtube.com");
         System.out.println(driver.getTitle());
         driver.close();
     }
