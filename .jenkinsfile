@@ -1,46 +1,47 @@
 pipeline
 {
 agent any
-
+{
 stages
 {
-stage('Build')
+stage('build')
 {
+
 steps
 {
-echo 'building the code'
+
+echo 'Project Builded'
 }
 
-}
-stage('deploy')
-{
-steps{
-echo 'deploying the code'
-}
 
 }
-stage('test')
+
+stage('qa')
 {
-steps{
+
+steps
+{
+
 bat "mvn test"
 }
 
-}
 
 }
-stage('Release')
+
+stage('release')
 {
-when{
-branch "origin/master"
-}
-steps{
-echo 'releasing the project'
-}
 
-}
+steps
+{
 
+echo 'Project deployed to PROD'
+}
 
 
 }
 
+
+}
+
+}
 }
