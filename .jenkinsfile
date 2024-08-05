@@ -1,47 +1,99 @@
 pipeline
+
 {
+
 agent any
-{
+
+
+
 stages
-{
-stage('build')
-{
 
-steps
 {
 
-echo 'Project Builded'
-}
+stage('Build')
 
-
-}
-
-stage('qa')
 {
 
 steps
+
 {
+
+bat "mvn clean"
+
+}
+
+
+
+}
+
+stage('deploy')
+
+{
+
+steps{
+
+echo 'deploying the code'
+
+}
+
+
+
+}
+
+stage('test')
+
+{
+
+steps{
 
 bat "mvn test"
-}
-
 
 }
 
-stage('release')
+
+
+}
+
+
+
+stage('Unit Testing')
+
 {
 
-steps
+steps{
+
+bat "mvn compile"
+
+}
+
+
+
+}
+
+stage('Release')
+
 {
 
-echo 'Project deployed to PROD'
+
+
+steps{
+
+echo 'releasing the project'
+
+}
+
+
+
 }
 
 
+
+
+
+
+
 }
 
 
-}
 
-}
 }
