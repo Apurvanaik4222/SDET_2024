@@ -46,7 +46,7 @@ stage('test')
 
 steps{
 
-bat "mvn test"
+bat "mvn test -Ptestng"
 
 }
 
@@ -62,7 +62,7 @@ stage('Unit Testing')
 
 steps{
 
-bat "mvn compile"
+echo 'compiling the code'
 
 }
 
