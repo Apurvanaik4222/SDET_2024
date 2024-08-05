@@ -1,0 +1,47 @@
+pipeline
+{
+agent any
+{
+stages
+{
+stage('build')
+{
+
+steps
+{
+
+echo 'Project Builded'
+}
+
+
+}
+
+stage('qa')
+{
+
+steps
+{
+
+bat "mvn test"
+}
+
+
+}
+
+stage('release')
+{
+
+steps
+{
+
+echo 'Project deployed to PROD'
+}
+
+
+}
+
+
+}
+
+}
+}
